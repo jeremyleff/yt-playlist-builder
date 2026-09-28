@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &middot; YT Playlist Builder</title>
+<style>
+  :root {
+    --fg: #202124; --muted: #5f6368; --line: #e8eaed;
+    --bg: #ffffff; --link: #1a73e8; --code: #f1f3f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #e8eaed; --muted: #9aa0a6; --line: #3c4043;
+      --bg: #1f1f1f; --link: #8ab4f8; --code: #2d2e30;
+    }
+  }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6; color: var(--fg); background: var(--bg);
+    max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem;
+       padding-top: 1.1rem; border-top: 1px solid var(--line); }
+  .sub { color: var(--muted); margin: 0 0 2rem; }
+  a { color: var(--link); }
+  code { background: var(--code); padding: .1rem .35rem;
+         border-radius: 3px; font-size: .9em; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1.25rem;
+           border-top: 1px solid var(--line);
+           color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="sub">YT Playlist Builder &middot; last updated 28 September 2026</p>
+
+<p>
+  YT Playlist Builder is a personal program run by one person on their own
+  computer. It has a single user, who is also its author. There is no server,
+  no account system, and no other party involved.
+</p>
+
+<h2>What it accesses</h2>
+<p>
+  With the owner's consent, the program uses the YouTube Data API to read and
+  modify playlists in the owner's own YouTube account. Specifically it can
+  create playlists, add videos to them, remove videos from them, and read back
+  their contents. It requests the
+  <code>https://www.googleapis.com/auth/youtube.force-ssl</code> scope, which is
+  the narrowest scope YouTube offers that permits these writes.
+</p>
+
+<h2>What it stores</h2>
+<ul>
+  <li>
+    An OAuth token, kept in a file on the owner's own computer, readable only
+    by the owner's account. It is never transmitted anywhere except to Google.
+  </li>
+  <li>
+    A list of which video IDs have already been seen, so the same upload is not
+    added twice.
+  </li>
+  <li>
+    Video titles, descriptions and runtimes, used to write the summary email.
+  </li>
+</ul>
+<p>
+  All of this lives on the owner's computer. None of it is uploaded, published,
+  sold, or shared.
+</p>
+
+<h2>What is sent elsewhere</h2>
+<p>
+  Two outside services are used, both at the owner's direction:
+</p>
+<ul>
+  <li>
+    <strong>Anthropic's API</strong> receives the titles, descriptions and
+    runtimes of newly added videos in order to write the summary. It does not
+    receive the OAuth token or any account information.
+  </li>
+  <li>
+    <strong>An SMTP server</strong> (Gmail) delivers the summary email to the
+    owner and one other named recipient.
+  </li>
+</ul>
+
+<h2>What is not collected</h2>
+<p>
+  The program collects no analytics, sets no cookies, has no telemetry, and
+  contacts no service other than the ones named above. It does not access
+  anyone else's Google account, and there is no mechanism by which it could.
+</p>
+
+<h2>Google user data</h2>
+<p>
+  Use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+  API Services User Data Policy</a>, including the Limited Use requirements.
+  Google user data is used only to operate the playlist features described on
+  the <a href="index.html">home page</a>. It is not used for advertising, not
+  sold, and not transferred to anyone.
+</p>
+
+<h2>Revoking access</h2>
+<p>
+  Access can be withdrawn at any time from
+  <a href="https://myaccount.google.com/permissions">Google Account
+  permissions</a>, which immediately stops the program from reaching the
+  account. Deleting the token file on the computer has the same effect locally.
+</p>
+
+<h2>Contact</h2>
+<p>jeremy.leff@gmail.com</p>
+
+<footer>
+  <a href="index.html">Home</a> &middot;
+  <a href="terms.html">Terms of service</a>
+</footer>
+
+</body>
+</html>

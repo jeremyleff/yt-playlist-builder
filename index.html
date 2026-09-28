@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YT Playlist Builder</title>
+<style>
+  :root {
+    --fg: #202124; --muted: #5f6368; --line: #e8eaed;
+    --bg: #ffffff; --link: #1a73e8; --code: #f1f3f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #e8eaed; --muted: #9aa0a6; --line: #3c4043;
+      --bg: #1f1f1f; --link: #8ab4f8; --code: #2d2e30;
+    }
+  }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6; color: var(--fg); background: var(--bg);
+    max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .75rem;
+       padding-top: 1.25rem; border-top: 1px solid var(--line); }
+  .sub { color: var(--muted); margin: 0 0 2rem; }
+  a { color: var(--link); }
+  code { background: var(--code); padding: .1rem .35rem;
+         border-radius: 3px; font-size: .9em; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1.25rem;
+           border-top: 1px solid var(--line);
+           color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>YT Playlist Builder</h1>
+<p class="sub">A personal tool for keeping one YouTube playlist tidy.</p>
+
+<p>
+  YT Playlist Builder is a small, single-user program that runs on its owner's
+  own computer. It watches a handful of YouTube channels, adds their new uploads
+  to a private playlist, and emails a nightly summary of what it added. It is
+  not a product, not a service, and has no users other than its author.
+</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Checks a fixed list of YouTube channels once a day for new uploads.</li>
+  <li>Adds matching uploads to one playlist owned by the person running it.</li>
+  <li>Moves items older than three months into an archive playlist.</li>
+  <li>Emails the owner a short summary of what was added.</li>
+  <li>Can download a playlist's audio for offline archiving.</li>
+</ul>
+
+<h2>Why it needs access to YouTube</h2>
+<p>
+  Reading public YouTube data needs no permission. <em>Writing</em> to a
+  playlist does, so the program asks for the
+  <code>youtube.force-ssl</code> scope in order to create playlists and add or
+  remove items in the account it is run from. That is the only thing it uses the
+  permission for.
+</p>
+
+<h2>Source</h2>
+<p>
+  The full source is public at
+  <a href="https://github.com/jeremyleff/yt-playlist-mcp">github.com/jeremyleff/yt-playlist-mcp</a>.
+</p>
+
+<footer>
+  <a href="privacy.html">Privacy policy</a> &middot;
+  <a href="terms.html">Terms of service</a> &middot;
+  Contact: jeremy.leff@gmail.com
+</footer>
+
+</body>
+</html>
